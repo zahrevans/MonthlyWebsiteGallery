@@ -17,11 +17,20 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/asb7wmx.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
             ><img src="https://picsum.photos/50" alt=""
@@ -29,40 +38,44 @@
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Websites
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">October</a></li>
-                  <li><a class="dropdown-item" href="#">November</a></li>
-                  <li><a class="dropdown-item" href="#">December</a></li>
-                  <li><a class="dropdown-item" href="#">January</a></li>
-                  <li><a class="dropdown-item" href="#">February</a></li>
-                  <li><a class="dropdown-item" href="#">March</a></li>
-                  <li><a class="dropdown-item" href="#">April</a></li>
-                  <li><a class="dropdown-item" href="#">May</a></li>
-                  <li><a class="dropdown-item" href="#">June</a></li>
-                </ul>
-              </li>
-            </ul>
-            <span class="navbar-text"> Gallery Home </span>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Websites
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li><a class="nav-item" href="">October</a></li>
+                <li><a class="nav-item" href="#">November</a></li>
+                <li><a class="nav-item" href="#">December</a></li>
+                <li><a class="nav-item" href="#">January</a></li>
+                <li><a class="nav-item" href="#">February</a></li>
+                <li><a class="nav-item" href="#">March</a></li>
+                <li><a class="nav-item" href="#">April</a></li>
+                <li><a class="nav-item" href="#">May</a></li>
+                <li><a class="nav-item" href="#">June</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -71,9 +84,11 @@
       <div class="container-fluid">
         <!-- Header/Intro Section -->
         <div class="row text-center d-flex justify-content-center py-3">
-          <div class="col-12 col-md-4 d-flex align-items-center">
+          <div
+            class="col-12 col-md-4 d-flex align-items-center animate__animated animate__lightSpeedInLeft"
+          >
             <div>
-              <h1>Welcome to our Gallery Site</h1>
+              <h1>Welcome to My Gallery Site</h1>
               <p class="d-none d-md-block">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
                 at eos. Commodi esse tempore adipisci repellendus. Unde natus
@@ -83,7 +98,9 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div
+            class="col-12 col-md-4 animate__animated animate__lightSpeedInRight"
+          >
             <div>
               <img src="https://picsum.photos/id/200/400" alt="" />
             </div>
@@ -262,22 +279,22 @@
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+              <a href="#" class="footer-link px-2">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+              <a href="#" class="footer-link px-2">Features</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+              <a href="#" class="footer-link px-2">Pricing</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+              <a href="#" class="footer-link px-2">FAQs</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+              <a href="#" class="footer-link px-2">About</a>
             </li>
           </ul>
-          <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+          <p class="text-center">© 2024 Company, Inc</p>
         </footer>
       </div>
     </footer>
